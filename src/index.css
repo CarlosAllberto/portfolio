@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1B1D20;
+  color: whitesmoke;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.header a, .footer a {
+  color: whitesmoke;
+  margin: 0 10px;
+}
+
+.header a:hover, .footer a:hover {
+  color: violet;
+}
+
+#initial {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU");
+  /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU */ 
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+#initial .content {
+  padding-top: calc(110vh / 3);
+}
+
+#initial .contentImage {
+  background-image: url("/public/Picsart_22-07-16_17-23-45-813.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+  height: 110vh;
+}
+
+#initial .contentImage .float1 {
+  background: purple;
+  color: white;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 470px;
+  right: 50px;
+  border-radius: 4px;
+}
+
+#initial .contentImage .float2 {
+  background: #52998f;
+  color: white;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 40px;
+  right: -410px;
+  border-radius: 4px;
+}
+
+#initial .contentImage .float1:hover, #initial .contentImage .float2:hover {
+  transition: .4s;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+#skills {
+  /*padding-top: calc(100vh/2);*/
+  background-image: url("/public/wp8855495-hackerman-wallpapers.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills .content {
+  background: #1B1D20;
+  color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+}
+
+#skills .content img {
+  margin: 5px;
+}
+
+#sobreMim {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  height: 110vh;
+  background-image: url("https://miro.medium.com/max/1012/1*bN5k5RVQnXGHb-UvdOB9IA.gif");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .input { 
+  border: 3px solid gray;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: whitesmoke !important;
+  padding: 12px 0;
+  text-indent: 12px;
+  width: 100%;
+  margin: 5px 0;
+  transition: .5s;
+}
+
+#contact .input:focus {
+  border: 3px solid purple;
+}
+
+@media (max-width: 500px) {
+  #initial {
+    width: 100vw;
+    height: auto;
+    background-size: 100% 100%;
+  }
+  #initial .contentImage {
+    height: 60vh;
+    background-size: 100% auto;
+    background-position: top;
+  }
+  #initial .content {
+    padding-top: 0;
+    height: 60vh;
+  }
+  #initial .contentImage .float1, #initial .contentImage .float2 {
+    display: none;
+  }
+  #skills {
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+  }
+}
