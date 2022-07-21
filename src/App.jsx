@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <Header />
-      <section id="initial">
+      <section id="home">
         <Container>
           <Grid container spacing={2}>
             <Grid item sm={6} xs={12} order={{sm: 1, xs: 2}} classes={{root: "content"}}>
@@ -46,6 +46,14 @@ function App() {
                 variant="h3"
               >
                 Hi! I'm Carlos 
+                <Typewriter
+                  options={{
+                    strings: ['Dev Full Stack', 'Hacker Etical'],
+                    autoStart: true,
+                    loop: true,
+                    delay: 75
+                  }}
+                />
               </Typography>
               <Typography
                 variant="p"
@@ -60,11 +68,13 @@ function App() {
                 <ArticleIcon/>
                 <p>Baixar CV</p>
               </div>
-              <div className="float2" data-aos="fade-left" data-aos-duration="2000">
-                <ContactPageIcon/>
-                <p>Contato</p>
-                <TouchAppIcon sx={{ position: "relative", top: "25px", fontSize: "2rem" }} />
-              </div>
+              <a href="#contact">
+                <div className="float2" data-aos="fade-left" data-aos-duration="2000">
+                  <ContactPageIcon/>
+                  <p>Contato</p>
+                  <TouchAppIcon sx={{ position: "relative", top: "25px", fontSize: "2rem" }} />
+                </div>
+              </a>
             </Grid>
           </Grid>
         </Container>
@@ -173,10 +183,10 @@ function App() {
                 <img align="center" alt="Linux" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"/>
               </Tooltip>
           </Paper>
-          <p>Passe o Mouse</p>
+          <Typography variant="p" sx={{display: {sm: "block", xs: "none"}}}>Passe o Mouse</Typography>
         </Container>
       </section>
-      <section id="sobreMim">
+      <section id="sobre">
         <Container maxWidth="md">
           <Box data-aos="fade-left" data-aos-duration="1000">
             <Typography
@@ -222,12 +232,14 @@ function App() {
             <form>
               <Box style={{display: "flex"}}>
                 <input type="text" placeholder="Seu nome *" className="input" style={{ width: "50%", marginRight: "10px" }} />
-                <input type="text" placeholder="Seu email *" className="input" style={{ width: "50%", marginLeft: "10px" }} />
+                <input type="email" placeholder="Seu email *" className="input" style={{ width: "50%", marginLeft: "10px" }} />
               </Box>
               <Box>
               <input type="text" placeholder="Escreva um assunto" className="input"/>
               <textarea name="text" id="" rows="7" placeholder="Sua mensagem" className="input"></textarea>
-              <Button variant="outlined" color="secondary">Enviar</Button>
+              <Box display="flex" justifyContent="end">
+                <Button variant="outlined" color="secondary" classes={{root: "button"}}>Enviar</Button>
+              </Box>
               </Box>
             </form>
           </Box>

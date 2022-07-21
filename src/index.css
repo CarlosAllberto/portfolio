@@ -14,6 +14,22 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: purple;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: violet;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
 p {
   font-size: 1.2rem;
 }
@@ -27,7 +43,7 @@ p {
   color: violet;
 }
 
-#initial {
+#home {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU");
   /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU */ 
   background-size: 100%;
@@ -35,11 +51,11 @@ p {
   height: 110vh;
 }
 
-#initial .content {
+#home .content {
   padding-top: calc(110vh / 3);
 }
 
-#initial .contentImage {
+#home .contentImage {
   background-image: url("/public/Picsart_22-07-16_17-23-45-813.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -47,7 +63,7 @@ p {
   height: 110vh;
 }
 
-#initial .contentImage .float1 {
+#home .contentImage .float1 {
   background: purple;
   color: white;
   width: 200px;
@@ -60,7 +76,7 @@ p {
   border-radius: 4px;
 }
 
-#initial .contentImage .float2 {
+#home .contentImage .float2 {
   background: #52998f;
   color: white;
   width: 200px;
@@ -73,7 +89,11 @@ p {
   border-radius: 4px;
 }
 
-#initial .contentImage .float1:hover, #initial .contentImage .float2:hover {
+#home a {
+  text-decoration: none;
+}
+
+#home .contentImage .float1:hover, #home .contentImage .float2:hover {
   transition: .4s;
   transform: translateY(-10px);
   cursor: pointer;
@@ -101,7 +121,7 @@ p {
   margin: 5px;
 }
 
-#sobreMim {
+#sobre {
   height: 110vh;
   display: flex;
   justify-content: center;
@@ -117,6 +137,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #contact {
@@ -144,22 +165,27 @@ p {
   border: 3px solid purple;
 }
 
+#contact .button {
+  border: 3px solid purple;
+  font-weight: 550;
+}
+
 @media (max-width: 500px) {
-  #initial {
+  #home {
     width: 100vw;
     height: auto;
     background-size: 100% 100%;
   }
-  #initial .contentImage {
+  #home .contentImage {
     height: 60vh;
     background-size: 100% auto;
     background-position: top;
   }
-  #initial .content {
+  #home .content {
     padding-top: 0;
     height: 60vh;
   }
-  #initial .contentImage .float1, #initial .contentImage .float2 {
+  #home .contentImage .float1, #home .contentImage .float2 {
     display: none;
   }
   #skills {
