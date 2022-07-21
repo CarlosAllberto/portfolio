@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
 import { AppBar, Container, Typography, Toolbar, Box, 
 IconButton, Menu, MenuItem, Button } from "@mui/material";
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
@@ -10,13 +8,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export const Header = () => {
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-      }, []);
     var [menu, setMenu] = useState(false);
 
-    let pages = ["home", "skills", "sobre", "projetos", "contato"];
     return(
         <>
             <AppBar sx={{ background: "#0000004a" }} classes={{root: "header"}}>
@@ -71,9 +64,9 @@ export const Header = () => {
                             </Button>
                         </Box>
                         <Box>
-                        <a href="https://www.linkedin.com/in/carlosallberto344" target="_blank"><LinkedInIcon /></a>
-                            <a href="https://www.github.com/CarlosAllberto/" target="_blank"><GitHubIcon /></a>
-                            <a href="https://www.instagram.com/carlosallberto_s/" target="_blank"><InstagramIcon /></a>
+                            <a href="https://www.linkedin.com/in/carlosallberto344" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+                            <a href="https://www.github.com/CarlosAllberto/" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+                            <a href="https://www.instagram.com/carlosallberto_s/" target="_blank" rel="noreferrer"><InstagramIcon /></a>
                         </Box>
                     </Toolbar>
                 </Container>
@@ -107,9 +100,9 @@ export const Footer = () => {
                         >
                         </Typography>
                         <Box>
-                            <a href="#"><LinkedInIcon /></a>
-                            <a href="#"><GitHubIcon /></a>
-                            <a href="#"><InstagramIcon /></a>
+                            <a href="https://www.linkedin.com/in/carlosallberto344" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+                            <a href="https://www.github.com/CarlosAllberto/" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+                            <a href="https://www.instagram.com/carlosallberto_s/" target="_blank" rel="noreferrer"><InstagramIcon /></a>
                         </Box>
                     </Toolbar>
                 </Container>

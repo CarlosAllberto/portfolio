@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Header, Footer } from "./components";
 import Typewriter from 'typewriter-effect';
-import { Box, Grid, Container, Typography, Button, Paper, Tooltip, TextField } from "@mui/material";
+import { Box, Grid, Container, Typography, Button, Paper, Tooltip } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
