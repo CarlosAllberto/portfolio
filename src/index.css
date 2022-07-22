@@ -34,6 +34,11 @@ p {
   font-size: 1.2rem;
 }
 
+.header .link {
+  font-weight: 600;
+  padding: "0 15px";
+}
+
 .header a, .footer a {
   color: whitesmoke;
   margin: 0 10px;
@@ -41,6 +46,11 @@ p {
 
 .header a:hover, .footer a:hover {
   color: violet;
+}
+
+.header .logo:hover, .footer .logo:hover {
+  transition: 1s;
+  transform: rotate(1080deg);
 }
 
 #home {
@@ -53,6 +63,18 @@ p {
 
 #home .content {
   padding-top: calc(110vh / 3);
+}
+
+#home .content .welcome {
+  background-image: linear-gradient(to right, purple, #8942EE);
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  margin: 10px 0;
+  display: block;
+  border: .2px solid whitesmoke;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
 #home .contentImage {
@@ -184,6 +206,11 @@ p {
   #home .content {
     padding-top: 0;
     height: 60vh;
+  }
+  #home .content .welcome {
+    padding: 15px 0;
+    margin-top: 0;
+    width: 100%;
   }
   #home .contentImage .float1, #home .contentImage .float2 {
     display: none;

@@ -1,26 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Header, Footer } from "./components";
 import Typewriter from 'typewriter-effect';
-import { Box, Grid, Container, Typography, Button, Paper, Tooltip } from "@mui/material";
+import { Box, Grid, Container, Typography, Button, Paper, Tooltip, Alert } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-/*
-                <Typewriter
-                  options={{
-                    strings: ['Dev Full Stack', 'Hacker Etical'],
-                    autoStart: true,
-                    loop: true,
-                    delay: 75
-                  }}
-                />
-*/
-
 function App() {
+  const initialState = {
+    "nome": "",
+    "email": "",
+    "assunto": "",
+    "mensagem": ""
+  }
+  const [dados, setDados] = useState(initialState);
+  const [emailSuccess, setEmailsuccess] = useState(false);
+  const sendEmail = () => {
+    console.log(dados);
+    if(dados.nome === "" || dados.email === "") {
+      window.alert("Preencha os campos obrigatorios *");
+    } else {
+      if(dados.email.indexOf("@" && ".com") !== -1) {
+        setEmailsuccess(!emailSuccess);
+        setDados(initialState);
+      } else {
+        window.alert("Digite um email valido");
+      }
+    }
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -33,12 +43,12 @@ function App() {
         <Container>
           <Grid container spacing={2}>
             <Grid item sm={6} xs={12} order={{sm: 1, xs: 2}} classes={{root: "content"}}>
-              <Button
-                variant="contained"
-                sx={{backgroundImage: "linear-gradient(to right, purple, #8942EE)", border: ".2px solid white", margin: {sm: "20px 0", xs: 0}, padding: {sm: "10px", xs: "15px 0"}, width: {sm: "auto", xs: "100%"} }}
+              <typography
+                variant="span"
+                className="welcome"
               >
                 Welcome to my Portfólio
-              </Button>
+              </typography>
               <Typography
                 component="h1"
                 fontWeight={1000}
@@ -214,7 +224,7 @@ function App() {
             >
               Projetos recentes
             </Typography>
-              <PlayArrowIcon sx={{ fontSize: "15rem", margin: "auto", display: "block", cursor: "pointer" }} />
+              <PlayArrowIcon onClick={() => alert("Em breve...")} sx={{ fontSize: "15rem", margin: "auto", display: "block", cursor: "pointer" }} />
               <h2 style={{display: "block", margin: "auto", textAlign: "center"}}>Press to Start!</h2>
           </Box>
         </Container>
@@ -228,17 +238,21 @@ function App() {
             >
               Contrate-me.
             </Typography>
-            <p>Estou disponível para full-time, part-time e freelance. Conecte-se comigo através do e-mail: dasilvacarlosalberto344@gmail.com </p>
+            <p>Estou disponível para full-time, part-time e freelance. Conecte-se comigo através do e-mail: <a href="https://mailto:dasilvacarlosalberto344@gmail.com" target="_blank" rel="noreferrer">dasilvacarlosalberto344@gmail.com</a></p>
             <form>
+              {emailSuccess ? <Alert severity="success">Email enviado com sucesso. muito obrigado pela escolha</Alert> : null}
+              
               <Box style={{display: "flex"}}>
-                <input type="text" placeholder="Seu nome *" className="input" style={{ width: "50%", marginRight: "10px" }} />
-                <input type="email" placeholder="Seu email *" className="input" style={{ width: "50%", marginLeft: "10px" }} />
+                <input value={dados.nome} onChange={e => setDados({...dados, nome: e.target.value})} type="text" placeholder="Seu nome *" className="input" style={{ width: "50%", marginRight: "10px" }} />
+                <input value={dados.email} onChange={e => setDados({...dados, email: e.target.value})} type="email" placeholder="Seu email *" className="input" style={{ width: "50%", marginLeft: "10px" }} />
               </Box>
               <Box>
-              <input type="text" placeholder="Escreva um assunto" className="input"/>
-              <textarea name="text" id="" rows="7" placeholder="Sua mensagem" className="input"></textarea>
+              <input value={dados.assunto} onChange={e => setDados({...dados, assunto: e.target.value})} type="text" placeholder="Escreva um assunto" className="input"/>
+              <textarea value={dados.mensagem} onChange={e => setDados({...dados, mensagem: e.target.value})} name="text" id="" rows="7" placeholder="Sua mensagem" className="input"></textarea>
               <Box display="flex" justifyContent="end">
-                <Button variant="outlined" color="secondary" classes={{root: "button"}}>Enviar</Button>
+                {emailSuccess ? 
+                <Button variant="outlined" color="secondary" classes={{root: "button"}} disabled>Enviar</Button>:
+                <Button variant="outlined" color="secondary" classes={{root: "button"}} onClick={sendEmail}>Enviar</Button> }
               </Box>
               </Box>
             </form>

@@ -39,7 +39,7 @@ export const Header = () => {
                                 <MenuIcon />
                             </IconButton>
                         </Box>
-                        <BubbleChartIcon sx={{ fontSize: "3rem" }} />
+                        <BubbleChartIcon sx={{ fontSize: "3rem" }} classes={{root: "logo"}} />
                         <Typography 
                             component="a"
                             href="/"
@@ -47,19 +47,19 @@ export const Header = () => {
                         >
                         </Typography>
                         <Box edge="end" sx={{ display: {xs: "none", sm: "flex"}, flexGrow: 1 }}>
-                            <Button href="#home" color="inherit" sx={{fontWeight: 600, padding: "0 25px", "&:hover": {color: "violet"}}}>
+                            <Button href="#home" color="inherit" classes={{root: "link"}}>
                                 home
                             </Button>
-                            <Button href="#skills" color="inherit" sx={{fontWeight: 600, padding: "0 25px", "&:hover": {color: "violet"}}}>
+                            <Button href="#skills" color="inherit" classes={{root: "link"}}>
                                 skills
                             </Button>
-                            <Button href="#sobre" color="inherit" sx={{fontWeight: 600, padding: "0 25px", "&:hover": {color: "violet"}}}>
+                            <Button href="#sobre" color="inherit" classes={{root: "link"}}>
                                 sobre
                             </Button>
-                            <Button href="#projects" color="inherit" sx={{fontWeight: 600, padding: "0 25px", "&:hover": {color: "violet"}}}>
+                            <Button href="#projects" color="inherit" classes={{root: "link"}}>
                                 projetos
                             </Button>
-                            <Button href="#contact" color="inherit" sx={{fontWeight: 600, padding: "0 25px", "&:hover": {color: "violet"}}}>
+                            <Button href="#contact" color="inherit" classes={{root: "link"}}>
                                 contato
                             </Button>
                         </Box>
@@ -92,7 +92,7 @@ export const Footer = () => {
                             >
                             </IconButton>
                         </Box>
-                        <BubbleChartIcon sx={{ fontSize: "3rem" }} />
+                        <BubbleChartIcon sx={{ fontSize: "3rem" }} classes={{root: "logo"}}/>
                         <Typography 
                             component="a"
                             href="/"
