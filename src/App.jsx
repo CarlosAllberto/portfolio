@@ -8,6 +8,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import emailjs from 'emailjs-com';
 
 function App() {
   const initialState = {
@@ -25,8 +26,12 @@ function App() {
       window.alert("Preencha os campos obrigatorios *");
     } else {
       if(dados.email.indexOf("@" && ".com") !== -1) {
-        setEmailsuccess(!emailSuccess);
-        setDados(initialState);
+        emailjs.send("portfolioMessage", "template_1hhq8j9", dados, "bpEnz_KDXrbuvBnSM")
+        .then((result) => {
+          setEmailsuccess(!emailSuccess);
+          setDados(initialState);
+        })
+        .catch(err => window.alert("Erro desconhecido, tente novamente."));
       } else {
         window.alert("Digite um email valido");
       }
