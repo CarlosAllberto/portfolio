@@ -220,4 +220,9 @@ p {
     height: 100vh;
     background-size: 100% 100%;
   }
+  #contact .input {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }

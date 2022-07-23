@@ -18,7 +18,8 @@ function App() {
   }
   const [dados, setDados] = useState(initialState);
   const [emailSuccess, setEmailsuccess] = useState(false);
-  const sendEmail = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
     console.log(dados);
     if(dados.nome === "" || dados.email === "") {
       window.alert("Preencha os campos obrigatorios *");
@@ -32,7 +33,7 @@ function App() {
     }
   }
   useEffect(() => {
-    AOS.init();
+    AOS.init({disable: "mobile"});
     AOS.refresh();
   }, []);
 
@@ -239,11 +240,11 @@ function App() {
               Contrate-me.
             </Typography>
             <p>Estou disponível para full-time, part-time e freelance. Conecte-se comigo através do e-mail: <a href="https://mailto:dasilvacarlosalberto344@gmail.com" target="_blank" rel="noreferrer">dasilvacarlosalberto344@gmail.com</a></p>
-            <form>
+            <form onSubmit={sendEmail}>
               {emailSuccess ? <Alert severity="success">Email enviado com sucesso. muito obrigado pela escolha</Alert> : null}
               
-              <Box style={{display: "flex"}}>
-                <input value={dados.nome} onChange={e => setDados({...dados, nome: e.target.value})} type="text" placeholder="Seu nome *" className="input" style={{ width: "50%", marginRight: "10px" }} />
+              <Box sx={{display: {sm: "flex", xs: "block"}}}>
+                <input value={dados.nome} onChange={e => setDados({...dados, nome: e.target.value})} type="text" placeholder="Seu nome *" className="input" style={{width: "50%", marginRight: "10px"}} />
                 <input value={dados.email} onChange={e => setDados({...dados, email: e.target.value})} type="email" placeholder="Seu email *" className="input" style={{ width: "50%", marginLeft: "10px" }} />
               </Box>
               <Box>
@@ -252,7 +253,7 @@ function App() {
               <Box display="flex" justifyContent="end">
                 {emailSuccess ? 
                 <Button variant="outlined" color="secondary" classes={{root: "button"}} disabled>Enviar</Button>:
-                <Button variant="outlined" color="secondary" classes={{root: "button"}} onClick={sendEmail}>Enviar</Button> }
+                <Button variant="outlined" color="secondary" type="submit" classes={{root: "button"}}>Enviar</Button> }
               </Box>
               </Box>
             </form>
