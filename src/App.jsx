@@ -230,8 +230,11 @@ function App() {
             >
               Projetos recentes
             </Typography>
+            <Box className="play">
               <PlayArrowIcon onClick={() => alert("Em breve...")} sx={{ fontSize: "15rem", margin: "auto", display: "block", cursor: "pointer" }} />
               <h2 style={{display: "block", margin: "auto", textAlign: "center"}}>Press to Start!</h2>
+            </Box>
+            <img className="tv" src="pngegg.png" alt="" />
           </Box>
         </Container>
       </section>

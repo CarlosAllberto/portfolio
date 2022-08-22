@@ -54,7 +54,7 @@ p {
 }
 
 #home {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU");
+  background-image: url(../public/glitch_noise_interference_153596_1920x1080.jpg);
   /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCUR-KKdBXP4ucxnyxt875KwZ1Onsf6r-sK4BtOZby9SzoNVuTdljlbz6GFVFZNQMR1A&usqp=CAU */ 
   background-size: 100%;
   background-repeat: no-repeat;
@@ -154,7 +154,7 @@ p {
   height: 110vh;
   background-image: url("https://miro.medium.com/max/1012/1*bN5k5RVQnXGHb-UvdOB9IA.gif");
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: auto 50%;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -162,11 +162,29 @@ p {
   text-align: center;
 }
 
+#projects .play {
+  display: none;
+}
+
+#projects img.tv {
+  width: 80%;
+  margin: auto;
+}
+
 #contact {
   height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#contact a {
+  color: purple;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 #contact .input { 
