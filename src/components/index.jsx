@@ -114,7 +114,7 @@ export const Footer = () => {
                         <typography
                             variant="p"
                         >
-                            Copyright © 2022 Carlos Alberto • Desenvolvedor e Hacker Etico
+                            Copyright © 2022 Carlos Alberto • Desenvolvedor & Hacker Etico
                         </typography>
                     </Box>
                 </Container>

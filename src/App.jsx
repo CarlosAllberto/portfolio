@@ -76,7 +76,7 @@ function App() {
                 color="white"
                 fontSize="1.2rem"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequuntur modi consequatur qui ratione sint ut! Odit suscipit voluptatibus dolorum porro, assumenda doloremque a excepturi aperiam, magnam voluptas eos repellat?
+                Seja muito bem vindo ao meu Portfolio <br/>estou muito feliz por você estar aqui.
               </Typography>
             </Grid>
             <Grid item sm={6} xs={12} order={{sm: 2, xs: 1}} classes={{root: "contentImage"}}>
@@ -214,9 +214,23 @@ function App() {
             <img src="AREmoji_20220719_105135_54077.png" height={150} style={{borderRadius: "50%"}} alt="" />
             <Typography
              variant="p"
-             fontSize="1.2rem"
+             fontSize="1.8rem"
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita enim quas corrupti, eaque ad illum delectus iure dolor mollitia omnis facilis provident possimus necessitatibus commodi ipsa inventore nostrum cupiditate neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quibusdam saepe harum excepturi quod, magnam exercitationem repudiandae perspiciatis voluptatibus maxime neque, alias earum tempora libero omnis molestiae corrupti vel fugit.
+              Meu nome é Carlos e tenho 19 anos, sou Desenvolvesor WEB FullStack Estagiario, tambem gosto muito de segurança da informação.
+            </Typography>
+            <br /> <br />
+            <Typography
+              variant="p"
+              fontSize="1.8rem"
+            >
+              Amo estudar coisas novas e ajudar pessoas a tirar dúvidas, eu não desisto até encontrar a solução para um problema de um sistema ou código.
+            </Typography>
+            <br /> <br />
+            <Typography
+             variant="p"
+             fontSize="1.8rem"
+            >
+              Busco melhorar a cada dia e ter mais conhecimento do que ontem, nem que seja 1%.
             </Typography>
           </Box>
         </Container>
@@ -234,7 +248,6 @@ function App() {
               <PlayArrowIcon onClick={() => alert("Em breve...")} sx={{ fontSize: "15rem", margin: "auto", display: "block", cursor: "pointer" }} />
               <h2 style={{display: "block", margin: "auto", textAlign: "center"}}>Press to Start!</h2>
             </Box>
-            <img className="tv" src="pngegg.png" alt="" />
           </Box>
         </Container>
       </section>
@@ -260,8 +273,8 @@ function App() {
               <textarea value={dados.mensagem} onChange={e => setDados({...dados, mensagem: e.target.value})} name="text" id="" rows="7" placeholder="Sua mensagem" className="input"></textarea>
               <Box display="flex" justifyContent="end">
                 {emailSuccess ? 
-                <Button variant="outlined" color="secondary" classes={{root: "button"}} disabled>Enviar</Button>:
-                <Button variant="outlined" color="secondary" type="submit" classes={{root: "button"}}>Enviar</Button> }
+                <Button variant="outlined" classes={{root: "button"}} disabled>Enviar</Button>:
+                <Button variant="outlined" type="submit" classes={{root: "button"}}>Enviar</Button> }
               </Box>
               </Box>
             </form>
