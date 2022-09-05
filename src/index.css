@@ -47,10 +47,9 @@ p {
 }
 
 #home {
-  background-image: url("/public/Picsart_22-07-16_17-23-45-813.png");
   background-image: url(../public/Group.png);
   background-blend-mode: hard-light;
-  background-size: auto 70%;
+  background-size: auto 80%;
   background-position: left bottom;
   background-repeat: no-repeat;
   height: 110vh;
@@ -131,9 +130,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../public/Group\ 153\ \(1\).png);
-  background-size: 100% auto;
-  background-position: bottom;
+  background-image: url(../public/Group.png);
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 #projects {
@@ -164,9 +164,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../public/Group.png);
-  background-size: auto 70%;
-  background-position: left top;
+  background-image: url(../public/Group\ 153.png);
+  background-size: 100% auto;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
