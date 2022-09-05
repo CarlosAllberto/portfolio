@@ -12,7 +12,7 @@ export const Header = () => {
 
     return(
         <>
-            <AppBar sx={{ background: "#0000004a" }} classes={{root: "header"}}>
+            <AppBar classes={{root: "header"}}>
                 <Container>
                 <Box sx={{ display: menu ? "block" : "none", width: "100vw", heith: "100%" }}>
                     <Button href="#home" color="inherit" sx={{display: "block"}} classes={{root: "link"}}>
