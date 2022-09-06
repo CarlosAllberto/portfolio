@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Header, Footer } from "./components";
 import Typewriter from 'typewriter-effect';
-import { Box, Grid, Container, Typography, Button, Paper, Tooltip, Alert } from "@mui/material";
+import { Box, Grid, Container, Typography, Button, Tooltip, Alert } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
@@ -49,12 +49,12 @@ function App() {
         <Container>
           <Grid container spacing={2}>
             <Grid item sm={6} xs={12} order={{sm: 1, xs: 2}} classes={{root: "content"}}>
-              <typography
+              <Typography
                 variant="span"
                 className="welcome"
               >
                 Welcome to my Portfólio
-              </typography>
+              </Typography>
               <Typography
                 component="h1"
                 fontWeight={1000}
@@ -227,7 +227,7 @@ function App() {
               </Tooltip>
             </Grid>
           </Grid>
-          <Typography align="left" variant="p" sx={{display: {sm: "block", xs: "none", paddingTop: "20px"}}}>/*Passe o Mouse*/</Typography>
+          <Typography align="left" variant="p" sx={{display: {sm: "block", xs: "none", paddingTop: "20px"}}}>Passe o Mouse</Typography>
         </Container>
       </section>
       <section id="sobre">

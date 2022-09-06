@@ -111,11 +111,11 @@ export const Footer = () => {
                         </Button>
                     </Box>
                     <Box>
-                        <typography
+                        <Typography
                             variant="p"
                         >
                             Copyright © 2022 Carlos Alberto • Desenvolvedor & Hacker Etico
-                        </typography>
+                        </Typography>
                     </Box>
                 </Container>
             </Box>
