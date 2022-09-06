@@ -8,6 +8,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import WorkIcon from '@mui/icons-material/Work';
 import emailjs from 'emailjs-com';
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
       <Header />
       <section id="home">
         <Container>
-          <Grid container spacing={2}>
+          <Grid container spacing={1}>
             <Grid item sm={6} xs={12} order={{sm: 1, xs: 2}} classes={{root: "content"}}>
               <Typography
                 variant="span"
@@ -60,6 +61,7 @@ function App() {
                 fontWeight={1000}
                 color="white"
                 variant="h3"
+                paddingY="3rem"
               >
                 Hi! I'm Carlos 
                 <Typewriter
@@ -101,11 +103,12 @@ function App() {
             <Typography
               variant="h3"
               fontWeight={800}
+              paddingY="3rem"
             >
               Minhas Skills
             </Typography>
           </Box>
-          <Grid container spacing={2}>
+          <Grid container rowSpacing={2} columnSpacing={{ xs: -5, sm: 2, md: 3 }}>
             <Grid item xs={6} lg={2}>
               <Tooltip classes={{ root: "tooltip" }} title={
                 <>
@@ -232,36 +235,75 @@ function App() {
       </section>
       <section id="sobre">
         <Container maxWidth="md">
-          <Box data-aos="fade-left" data-aos-duration="1000">
-            <Typography
-              variant="h3"
-              fontWeight={800}
-              align="center"
-            >
-              Sobre Mim
-            </Typography>
-            <img src="AREmoji_20220719_105135_54077.png" height={150} style={{borderRadius: "50%"}} alt="" />
-            <Typography
-             variant="p"
-             fontSize="1.5rem"
-            >
-              Meu nome é Carlos e tenho 19 anos, sou Desenvolvesor WEB FullStack Estagiario, tambem gosto muito de segurança da informação.
-            </Typography>
-            <br /> <br />
-            <Typography
-              variant="p"
-              fontSize="1.5rem"
-            >
-              Amo estudar coisas novas e ajudar pessoas a tirar dúvidas, eu não desisto até encontrar a solução para um problema de um sistema ou código.
-            </Typography>
-            <br /> <br />
-            <Typography
-             variant="p"
-             fontSize="1.5rem"
-            >
-              Busco melhorar a cada dia e ter mais conhecimento do que ontem, nem que seja 1%.
-            </Typography>
-          </Box>
+          <Typography
+            variant="h3"
+            fontWeight={800}
+            align="center"
+            paddingY="1rem"
+          >
+            Sobre Mim
+          </Typography>
+          <Grid container spacing={10}>
+            <Grid item xs={12} lg={6}>
+              <Box data-aos="fade-left" data-aos-duration="1000">
+                <img src="MyEmoji_20220906_152913_40277.png" height={120} style={{borderRadius: "50%"}} alt="" />
+                <Typography
+                variant="p"
+                fontSize="1.5rem"
+                >
+                  sou um Desenvolvesor WEB FullStack de 19 anos, tambem amo segurança da informação.
+                </Typography>
+                <br /> <br />
+                <Typography
+                  variant="p"
+                  fontSize="1.5rem"
+                >
+                  Amo estudar coisas novas e ajudar pessoas a tirar dúvidas, eu não desisto até encontrar a solução para um problema de um sistema ou código.
+                </Typography>
+                <br /> <br />
+                <Typography
+                variant="p"
+                fontSize="1.5rem"
+                >
+                  Busco melhorar a cada dia e ter mais conhecimento do que ontem, nem que seja 1%.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} lg={6}>
+              <Box data-aos="fade-left" data-aos-duration="1000">
+                <Typography
+                  variant="h4"
+                  fontWeight={800}
+                  paddingTop="3rem"
+                  paddingBottom="1rem"
+                >
+                  <WorkIcon /> Work Experience
+                </Typography>
+                <Typography
+                  variant="h5"
+                  fontWeight={800}
+                  paddingY="1rem"
+                >
+                  Developer <span style={{color: "#0F79AF"}}>Company Pillbiz</span>
+                </Typography>
+                <Typography
+                  variant="h6"
+                  fontWeight={800}
+                  align="left"
+                  paddingY="15px"
+                >
+                  2022 - present
+                </Typography>
+                <Typography
+                  variant="p"
+                  fontWeight={800}
+                  align="center"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ea eos laboriosam natus necessitatibus voluptatum consequatur impedit, aut quos, voluptates dolore dolorem quis nulla fugiat repellat aliquam vero nesciunt cupiditate?
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
         </Container>
       </section>
       <section id="projects">
@@ -270,8 +312,14 @@ function App() {
             <Typography
               variant="h3"
               fontWeight={800}
+              paddingY="3rem"
             >
               Projetos recentes
+            </Typography>
+            <Typography
+              variant="p"
+            >
+              Em breve em formato de jogo
             </Typography>
             <Box className="play">
               <PlayArrowIcon onClick={() => alert("Em breve...")} sx={{ fontSize: "15rem", margin: "auto", display: "block", cursor: "pointer" }} />
@@ -287,6 +335,7 @@ function App() {
               variant="h3"
               fontWeight={800}
               align="center"
+              paddingY="3rem"
             >
               Contrate-me.
             </Typography>

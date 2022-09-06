@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
+  background-color: #0E1013;
   color: whitesmoke;
 }
 
@@ -23,7 +23,7 @@ p {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, .8) !important;
+  background-color: #0e101375 !important;
   backdrop-filter: blur(2px);
 }
 
@@ -50,7 +50,7 @@ p {
   background-image: url(../public/Group.png);
   background-blend-mode: hard-light;
   background-size: auto 80%;
-  background-position: left bottom;
+  background-position: left top;
   background-repeat: no-repeat;
   height: 110vh;
 }
@@ -108,6 +108,8 @@ p {
   background-size: 100%;
   /*background-attachment: fixed;*/
   background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: luminosity;
   height: 110vh;
   display: flex;
   justify-content: center;
@@ -134,7 +136,7 @@ p {
   background-image: url(../public/Group.png);
   background-size: auto 80%;
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: bottom left;
 }
 
 #projects {
@@ -146,6 +148,7 @@ p {
   /*background-attachment: fixed;*/
   background-repeat: no-repeat;
   background-position: center;
+  background-blend-mode: luminosity;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +212,7 @@ p {
   #home {
     width: 100vw;
     height: auto;
-    background-position: left;
+    background-size: 80%;
   }
   #home .contentImage {
     height: 60vh;
@@ -228,10 +231,21 @@ p {
   #home .contentImage .float1, #home .contentImage .float2 {
     display: none;
   }
+  #skills {
+    padding: 5rem 0;
+  }
   #skills, #projects {
     width: 100vw;
     height: 100vh;
-    background-size: 100% 100%;
+    background-size: cover;
+  }
+  #sobre {
+    background-size: 80%;
+    padding: 5rem 0;
+  }
+  #contact {
+    background-size: auto 100vh;
+    background-position: top;
   }
   #contact .input {
     width: 100% !important;
