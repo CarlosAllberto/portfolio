@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom, black, rgb(15, 15, 15));
+  background-color: #000000;
   color: whitesmoke;
 }
 
@@ -114,8 +114,9 @@ p {
   align-items: center;
 }
 
-#skills .content {
+#skills img {
   background: #1B1D20;
+  border-radius: 4px;
   color: whitesmoke;
   padding: 20px;
   text-align: center;
@@ -141,6 +142,7 @@ p {
   background: url(../public/wp8855495-hackerman-wallpapers.jpg);
   box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.712);
   background-size: 100%;
+  height: 110vh;
   /*background-attachment: fixed;*/
   background-repeat: no-repeat;
   background-position: center;
@@ -207,7 +209,7 @@ p {
   #home {
     width: 100vw;
     height: auto;
-    background-size: 100% 100%;
+    background-position: left;
   }
   #home .contentImage {
     height: 60vh;
@@ -226,7 +228,7 @@ p {
   #home .contentImage .float1, #home .contentImage .float2 {
     display: none;
   }
-  #skills {
+  #skills, #projects {
     width: 100vw;
     height: 100vh;
     background-size: 100% 100%;
