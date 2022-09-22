@@ -1,5 +1,6 @@
 :root {
   --cor1: #0F79AF; 
+  --cor2: #918E83;
 }
 
 body {
@@ -9,8 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0E1016;
-  color: whitesmoke;
+  background-color: #0E1018;
+  color: var(--cor2);
 }
 
 code {
@@ -64,6 +65,7 @@ p {
 }
 
 #home .content .welcome {
+  color: whitesmoke;
   background-image: linear-gradient(to right, #002a53, var(--cor1));
   padding: 10px;
   width: 250px;

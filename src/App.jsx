@@ -75,7 +75,6 @@ function App() {
               </Typography>
               <Typography
                 variant="p"
-                color="white"
                 fontSize="1.2rem"
               >
                 Seja muito bem vindo ao meu Portfolio <br/>estou muito feliz por você estar aqui.
