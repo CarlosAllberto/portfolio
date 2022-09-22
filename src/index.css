@@ -216,7 +216,8 @@ p {
   #home {
     width: 100vw;
     height: auto;
-    background-size: 80%;
+    background-size: 300px;
+    background-position: top;
   }
   #home .contentImage {
     height: 60vh;
