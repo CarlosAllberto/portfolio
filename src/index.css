@@ -47,16 +47,20 @@ p {
 }
 
 #home {
+  height: 110vh;
+  background-image: url(../public/Picsart_22-07-16_17-23-45-813.png);
+  background-size: auto 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#home .content {
+  padding-top: calc(110vh / 3);
   background-image: url(../public/Group.png);
   background-blend-mode: hard-light;
   background-size: auto 80%;
   background-position: left top;
   background-repeat: no-repeat;
-  height: 110vh;
-}
-
-#home .content {
-  padding-top: calc(110vh / 3);
 }
 
 #home .content .welcome {
